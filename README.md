@@ -1,5 +1,5 @@
 # Pass Gen
-A random password generator creating simple to remember passwords
+A random password generator creating XKCD style simple to remember passwords
 
 [![Build Status](https://travis-ci.org/Cheezykins/PassGen.svg?branch=master)](https://travis-ci.org/Cheezykins/PassGen)
 [![Code Climate](https://codeclimate.com/github/Cheezykins/PassGen/badges/gpa.svg)](https://codeclimate.com/github/Cheezykins/PassGen)
@@ -11,7 +11,7 @@ A random password generator creating simple to remember passwords
 
 ## Rationale
 
-We train users with terrible passwords and [terrible constraints](https://www.troyhunt.com/security-insanity-how-we-keep-failing-at-the-basics/). [Short passwords are no good](https://blog.codinghorror.com/your-password-is-too-damn-short/), random passwords are hard to remember and make people write them down. A nice long phrase they can remember is much better.
+We train users with terrible passwords and [terrible constraints](https://www.troyhunt.com/security-insanity-how-we-keep-failing-at-the-basics/), random passwords are hard to remember and make people write them down, [short passwords are no good](https://blog.codinghorror.com/your-password-is-too-damn-short/). A nice long phrase they can remember is much better.
 
 [![Relevant XKCD](http://imgs.xkcd.com/comics/password_strength.png)](https://www.xkcd.com)
 
