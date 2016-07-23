@@ -2,7 +2,7 @@
 
 namespace Cheezykins\PassGen;
 
-trait WordList
+trait EnglishWordList
 {
     protected static $listLength = 2079;
 

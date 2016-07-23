@@ -4,7 +4,7 @@ namespace Cheezykins\PassGen;
 
 class PassGen
 {
-    use WordList;
+    use EnglishWordList;
 
     /**
      * @param int $length
