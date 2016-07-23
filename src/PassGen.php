@@ -1,23 +1,21 @@
 <?php
 
-
 namespace Cheezykins\PassGen;
-
 
 class PassGen
 {
-
     use WordList;
 
     /**
      * @param int $length
-     * @return PassWord
+     *
      * @throws \TypeError
+     *
+     * @return PassWord
      */
     public static function generate($length = 6)
     {
-        if (!is_int($length) || $length <= 0)
-        {
+        if (!is_int($length) || $length <= 0) {
             throw new \TypeError('Length must be a positive integer');
         }
         $passWordElements = [];
@@ -27,6 +25,7 @@ class PassGen
         }
 
         $passWordString = implode('-', $passWordElements);
+
         return new PassWord($passWordString);
     }
 }
