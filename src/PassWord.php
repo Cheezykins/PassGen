@@ -29,7 +29,7 @@ final class PassWord
 
         $this->passWord = $passWord;
         $hash = password_hash($passWord, PASSWORD_DEFAULT, [
-            'cost' => 11
+            'cost' => 11,
         ]);
         if ($hash === false) {
             throw new CannotHashException('Unable to hash the password');
