@@ -34,8 +34,7 @@ class PassGenTest extends TestCase
     {
         $passwords = PassGen::bulkGenerate(3);
         $this->assertInternalType('array', $passwords);
-        foreach ($passwords as $password)
-        {
+        foreach ($passwords as $password) {
             $this->assertInstanceOf(PassWord::class, $password);
         }
     }
@@ -45,6 +44,4 @@ class PassGenTest extends TestCase
         $passwords = PassGen::bulkGenerate(20);
         $this->assertCount(20, $passwords);
     }
-
-
 }
