@@ -5,6 +5,9 @@ A random password generator creating simple to remember passwords
 [![Code Climate](https://codeclimate.com/github/Cheezykins/PassGen/badges/gpa.svg)](https://codeclimate.com/github/Cheezykins/PassGen)
 [![Test Coverage](https://codeclimate.com/github/Cheezykins/PassGen/badges/coverage.svg)](https://codeclimate.com/github/Cheezykins/PassGen/coverage)
 [![StyleCI](https://styleci.io/repos/64023504/shield)](https://styleci.io/repos/64023504)
+[![Latest Stable Version](https://poser.pugx.org/cheezykins/passgen/v/stable)](https://packagist.org/packages/cheezykins/passgen)
+[![License](https://poser.pugx.org/cheezykins/passgen/license)](https://packagist.org/packages/cheezykins/passgen)
+[![Total Downloads](https://poser.pugx.org/cheezykins/passgen/downloads)](https://packagist.org/packages/cheezykins/passgen)
 
 ## Rationale
 
