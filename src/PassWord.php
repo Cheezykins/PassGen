@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Cheezykins\PassGen;
-
 
 use Cheezykins\PassGen\Exceptions\CannotHashException;
 use Cheezykins\PassGen\Exceptions\PasswordTooLongException;
@@ -13,8 +11,10 @@ final class PassWord
     private $hash;
 
     /**
-     * Creates a new PassWord from the given string
+     * Creates a new PassWord from the given string.
+     *
      * @param $passWord
+     *
      * @throws CannotHashException
      * @throws PasswordTooLongException
      * @throws \TypeError
@@ -37,6 +37,7 @@ final class PassWord
 
     /**
      * Gets the plaintext password as a string.
+     *
      * @return string
      */
     public function getPlainText()
@@ -46,6 +47,7 @@ final class PassWord
 
     /**
      * Magic tostring method to return the hash.
+     *
      * @return string
      */
     public function __toString()
@@ -55,11 +57,11 @@ final class PassWord
 
     /**
      * Gets the password as a hash.
+     *
      * @return string
      */
     public function getHash()
     {
         return $this->hash;
     }
-
 }
