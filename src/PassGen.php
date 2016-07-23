@@ -8,10 +8,13 @@ class PassGen
 
     /**
      * Generate a list of passwords $amount passwords long of $length words.
+     *
      * @param int $amount
      * @param int $length
-     * @return PassWord[]
+     *
      * @throws \TypeError
+     *
+     * @return PassWord[]
      */
     public static function bulkGenerate($amount, $length = 6)
     {
@@ -22,11 +25,13 @@ class PassGen
         for ($count = 0; $count < $amount; $count++) {
             $passwords[] = self::generate($length);
         }
+
         return $passwords;
     }
 
     /**
-     * Generate a password up to $length words long
+     * Generate a password up to $length words long.
+     *
      * @param int $length
      *
      * @throws \TypeError
