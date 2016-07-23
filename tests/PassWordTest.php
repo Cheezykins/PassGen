@@ -1,15 +1,12 @@
 <?php
 
-
 namespace Cheezykins\PassGen\Tests;
-
 
 use Cheezykins\PassGen\Exceptions\PasswordTooLongException;
 use Cheezykins\PassGen\PassWord;
 
 class PassWordTest extends \PHPUnit_Framework_TestCase
 {
-
     public function testPassWordRequiresString()
     {
         $this->expectException(\TypeError::class);
@@ -37,7 +34,6 @@ class PassWordTest extends \PHPUnit_Framework_TestCase
     public function testMagicToStringReturnsHash()
     {
         $password = new PassWord('123');
-        $this->assertEquals($password->getHash(), (string)$password);
+        $this->assertEquals($password->getHash(), (string) $password);
     }
-
 }

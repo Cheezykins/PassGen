@@ -1,12 +1,9 @@
 <?php
 
-
 namespace Cheezykins\PassGen;
-
 
 trait WordList
 {
-
     protected static $listLength = 2079;
 
     protected static $wordList = [
@@ -2089,6 +2086,6 @@ trait WordList
         'yeah',
         'your',
         'yours',
-        'yourself'
+        'yourself',
     ];
 }

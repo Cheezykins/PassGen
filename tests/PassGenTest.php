@@ -2,13 +2,11 @@
 
 namespace Cheezykins\StringIncrementer\Tests;
 
-use Cheezykins\PassGen\Exceptions\PasswordTooLongException;
 use Cheezykins\PassGen\PassGen;
 use Cheezykins\PassGen\PassWord;
 
 class PassGenTest extends \PHPUnit_Framework_TestCase
 {
-
     public function testGenerateRequiresInteger()
     {
         $this->expectException(\TypeError::class);
@@ -22,6 +20,4 @@ class PassGenTest extends \PHPUnit_Framework_TestCase
         $password = PassGen::generate();
         $this->assertInstanceOf(PassWord::class, $password);
     }
-
-
 }
