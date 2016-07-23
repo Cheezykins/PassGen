@@ -28,13 +28,23 @@ composer require cheezykins/passgen
 Usage is very simple.
 
 ```php
-
 <?php
-
 // Import and use
 use Cheezykins\PassGen\PassGen;
-$password = PassGen::Generate();
+$password = PassGen::generate();
 echo $password->getPlainText(); // correct-horse-battery-staple-yard-iron
 echo $password->getHash(); // $2a$08$qV2WBuFjgSOY.jJssu5McOwv3s0E8DhlVb3laNbMYydEUseZhDp0i
 echo $password; // $2a$08$qV2WBuFjgSOY.jJssu5McOwv3s0E8DhlVb3laNbMYydEUseZhDp0i
+```
+
+Or you can generate a list of passwords.
+
+```php
+<?php
+$passwords = PassGen::bulkGenerate(20);
+foreach ($passwords as $password)
+{
+    echo $password->getPlainText();
+}
+// -- Outputs list of 20 passwords.
 ```

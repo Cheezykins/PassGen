@@ -23,7 +23,7 @@ final class PassWord
     {
         if (!is_string($passWord)) {
             throw new \TypeError('Password is not a string');
-        } elseif (strlen($passWord) > 72) {
+        } elseif (strlen($passWord) > 72) { // BCrypt (well, blow-fish) truncates values over 72 bytes.
             throw new PasswordTooLongException('Your password cannot be over 72 characters');
         }
 
