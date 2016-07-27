@@ -11,10 +11,11 @@ class PassGen
      *
      * @param int $amount
      * @param int $length
-     *
      * @param int $hashMode
-     * @return PassWord[]
+     *
      * @throws \TypeError
+     *
+     * @return PassWord[]
      */
     public static function bulkGenerate($amount, $length = 6, $hashMode = PassWord::HASH_MODE_LAZY)
     {
@@ -33,10 +34,11 @@ class PassGen
      * Generate a password up to $length words long.
      *
      * @param int $length
-     *
      * @param int $hashMode
-     * @return PassWord
+     *
      * @throws \TypeError
+     *
+     * @return PassWord
      */
     public static function generate($length = 6, $hashMode = PassWord::HASH_MODE_DEFAULT)
     {
