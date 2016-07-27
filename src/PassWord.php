@@ -18,8 +18,8 @@ final class PassWord
      * Creates a new PassWord from the given string.
      *
      * @param $passWord
-     *
      * @param int $hashMode
+     *
      * @throws CannotHashException
      * @throws PasswordTooLongException
      * @throws \TypeError
@@ -33,8 +33,7 @@ final class PassWord
         }
 
         $this->passWord = $passWord;
-        if ($hashMode === self::HASH_MODE_ACTIVE)
-        {
+        if ($hashMode === self::HASH_MODE_ACTIVE) {
             $this->hashPassword();
         }
     }
@@ -44,8 +43,7 @@ final class PassWord
         $hash = password_hash($this->passWord, PASSWORD_DEFAULT, [
             'cost' => 11,
         ]);
-        if ($hash === false)
-        {
+        if ($hash === false) {
             throw new CannotHashException('Unable to hash the password');
         }
         $this->hash = $hash;
@@ -78,10 +76,10 @@ final class PassWord
      */
     public function getHash()
     {
-        if ($this->hash === null)
-        {
+        if ($this->hash === null) {
             $this->hashPassword();
         }
+
         return $this->hash;
     }
 }
