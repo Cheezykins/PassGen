@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Cheezykins\PassGen\Vendor\Laravel;
 
 use Illuminate\Support\Facades\Facade as IlluminateFacade;

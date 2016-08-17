@@ -9,9 +9,8 @@ use PHPUnit\Framework\TestCase;
 
 class GeneratorTest extends TestCase
 {
-
     /**
-     * @var PasswordGeneratorInterface $generator
+     * @var PasswordGeneratorInterface
      */
     protected $generator;
 
@@ -19,7 +18,6 @@ class GeneratorTest extends TestCase
     {
         $this->generator = new Generator();
     }
-
 
     public function testGenerateRequiresInteger()
     {

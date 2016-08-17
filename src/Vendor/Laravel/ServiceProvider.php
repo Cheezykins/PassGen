@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Cheezykins\PassGen\Vendor\Laravel;
 
 use Cheezykins\PassGen\Contracts\PasswordGeneratorInterface;
@@ -23,7 +22,7 @@ class ServiceProvider extends IlluminateServiceProvider
     {
         return [
             PasswordGeneratorInterface::class,
-            PassWordInterface::class
+            PassWordInterface::class,
         ];
     }
 }
