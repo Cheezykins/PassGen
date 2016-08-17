@@ -2,17 +2,15 @@
 
 namespace Cheezykins\PassGen;
 
+use Cheezykins\PassGen\Contracts\PassWordInterface;
 use Cheezykins\PassGen\Exceptions\CannotHashException;
 use Cheezykins\PassGen\Exceptions\PasswordTooLongException;
 
-final class PassWord
+final class PassWord implements PassWordInterface
 {
     private $passWord;
     private $hash;
 
-    const HASH_MODE_LAZY = 1;
-    const HASH_MODE_ACTIVE = 0;
-    const HASH_MODE_DEFAULT = 0;
 
     /**
      * Creates a new PassWord from the given string.

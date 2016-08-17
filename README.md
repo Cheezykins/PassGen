@@ -30,8 +30,9 @@ Usage is very simple.
 ```php
 <?php
 // Import and use
-use Cheezykins\PassGen\PassGen;
-$password = PassGen::generate();
+use Cheezykins\PassGen\Generator;
+$generator = new Generator();
+$password = $generator->generate();
 echo $password->getPlainText(); // correct-horse-battery-staple-yard-iron
 echo $password->getHash(); // $2a$08$qV2WBuFjgSOY.jJssu5McOwv3s0E8DhlVb3laNbMYydEUseZhDp0i
 echo $password; // $2a$08$qV2WBuFjgSOY.jJssu5McOwv3s0E8DhlVb3laNbMYydEUseZhDp0i
@@ -41,10 +42,25 @@ Or you can generate a list of passwords.
 
 ```php
 <?php
-$passwords = PassGen::bulkGenerate(20);
+use Cheezykins\PassGen\Generator;
+$generator = new Generator();
+$passwords = $generator->bulkGenerate(20);
 foreach ($passwords as $password)
 {
     echo $password->getPlainText();
 }
 // -- Outputs list of 20 passwords.
 ```
+
+## Laravel
+
+A laravel service provider is also included, as well as a facade.
+
+To use this, in your laravel app open up `config/app.php` and add the Service Provider to the providers list and Facade to the aliases list.
+
+```
+Cheezykins\PassGen\Vendor\Laravel\ServiceProvider::class
+'PassGen' => Cheezykins\PassGen\Vendor\Laravel\Facade::class 
+```
+
+You can then access the facade using `PassGen::generate();`
