@@ -19,14 +19,14 @@ class Generator implements PasswordGeneratorInterface
      *
      * @return PassWord[]
      */
-    public function bulkGenerate($amount, $length = 6, $hashMode = PassWord::HASH_MODE_LAZY)
+    public function bulkGenerate($amount, $length = 6)
     {
         if (!is_int($amount) || $amount <= 0) {
             throw new \TypeError('Length must be a positive integer');
         }
         $passwords = [];
         for ($count = 0; $count < $amount; $count++) {
-            $passwords[] = $this->generate($length, $hashMode);
+            $passwords[] = $this->generate($length);
         }
 
         return $passwords;
@@ -42,7 +42,7 @@ class Generator implements PasswordGeneratorInterface
      *
      * @return PassWord
      */
-    public function generate($length = 6, $hashMode = PassWord::HASH_MODE_DEFAULT)
+    public function generate($length = 6)
     {
         if (!is_int($length) || $length <= 0) {
             throw new \TypeError('Length must be a positive integer');

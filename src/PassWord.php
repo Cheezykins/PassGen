@@ -16,24 +16,19 @@ final class PassWord implements PassWordInterface
      * Creates a new PassWord from the given string.
      *
      * @param $passWord
-     * @param int $hashMode
      *
      * @throws CannotHashException
      * @throws PasswordTooLongException
      * @throws \TypeError
      */
-    public function __construct($passWord, $hashMode = self::HASH_MODE_DEFAULT)
+    public function __construct($passWord)
     {
         if (!is_string($passWord)) {
             throw new \TypeError('Password is not a string');
         } elseif (strlen($passWord) > 72) { // BCrypt (well, blow-fish) truncates values over 72 bytes.
             throw new PasswordTooLongException('Your password cannot be over 72 characters');
         }
-
         $this->passWord = $passWord;
-        if ($hashMode === self::HASH_MODE_ACTIVE) {
-            $this->hashPassword();
-        }
     }
 
     private function hashPassword()

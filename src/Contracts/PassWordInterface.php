@@ -7,16 +7,11 @@ namespace Cheezykins\PassGen\Contracts;
 interface PassWordInterface
 {
 
-    const HASH_MODE_LAZY = 1;
-    const HASH_MODE_ACTIVE = 0;
-    const HASH_MODE_DEFAULT = self::HASH_MODE_LAZY;
-
     /**
      * PassWordInterface constructor.
      * @param string $passWord The password in plain text
-     * @param int $hashMode The mode of hashing to use
      */
-    public function __construct($passWord, $hashMode = self::HASH_MODE_DEFAULT);
+    public function __construct($passWord);
 
     /**
      * Return the password in plain text
