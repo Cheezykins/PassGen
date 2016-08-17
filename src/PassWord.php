@@ -11,7 +11,6 @@ final class PassWord implements PassWordInterface
     private $passWord;
     private $hash;
 
-
     /**
      * Creates a new PassWord from the given string.
      *
