@@ -30,6 +30,6 @@
     "squizlabs/php_codesniffer": "^2.6"
   },
   "require": {
-    "paragonie/random_compat": "^1.0"
+    "paragonie/random_compat": "^2.0"
   }
 }
